@@ -1,0 +1,144 @@
+@import normalize-rails
+@import bourbon
+@import base/grid-settings
+@import neat
+@import base/variables
+@import ../static_styleguide/static_styleguide
+@import base/base
+
+// HEADER
+
+.mv-header
+  background: $grey-5
+  padding: 20px
+  +clearfix
+
+.mv-header__logo
+  font-weight: bold
+  color: $grey-1
+  font-size: 1.3em
+  float: left
+
+.mv-header__nav
+  float: right
+  a
+    // @extend .button
+    font-size: 0.8em
+
+// FlEX WRAPPER
+
+.mv-flex-wrapper
+  display: flex
+
+// SIDEBAR
+
+.mv-sidebar
+  background: #F7F7F7
+  width: 18%
+  box-sizing: border-box
+  display: block
+  float: left
+  padding: 30px 20px
+  flex: 1
+  min-height: 100vh
+  h3
+    font-weight: bold
+    font-size: 16px
+    margin-bottom: 25px
+    color: #444
+  ul li
+    margin-bottom: 20px
+    a
+      color: #555
+      font-size: 14px
+      text-decoration: none
+      &:hover
+        color: #000
+
+// MAIN
+
+.mv-main
+  box-sizing: border-box
+  width: 82%
+  float: left
+  padding: 30px 60px
+
+.mv-main__header
+  margin-bottom: 40px
+  h1
+    font-size: modular-scale(4)
+
+.mv-main__description
+  clear: both
+
+// COMPONENT
+
+.mv-component
+  margin-bottom: 150px
+
+  // TODO fix this hack to show container outer margins
+  .container
+    +outer-container(90%)
+
+.mv-component__item
+  +clearfix
+
+.mv-component__description
+  padding: 25px
+  background: #F7F7F7
+  border: 1px solid #E4E4E4
+  margin-top: 30px
+  h2
+    font-weight: bold
+    margin-bottom: 20px
+
+.mv-component__description__definition
+  margin-bottom: 20px
+  code
+    background: none !important
+    font-size: 14px
+
+.mv-component__description__properties
+  code
+    background: none !important
+    font-size: 14px
+  background: #fff !important
+  border: 1px solid #e4e4e4
+  max-height: 230px
+  overflow: auto
+  font-size: 13px
+  padding: 30px 20px
+
+// HINT
+
+.mv-hint
+  margin: 40px 0
+  padding: 30px
+  font-size: 14px
+  border-top: 2px solid #FCCC37
+  color: #777
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1)
+  h2
+    font-size: 19px
+    margin-bottom: 20px
+    color: #000
+    span
+      color: #FCCC37
+      margin-right: 5px
+      font-weight: bold
+  ul
+    list-style-type: disc
+    margin-left: 15px
+    li
+      margin-bottom: 10px
+      line-height: 1.5
+  pre
+    background: #F5F5F5
+    padding: 15px 30px
+    border-radius: 5px
+    margin-top: 10px
+    font-family: 'Courier New', 'Courier'
+    font-weight: 600
+    color: #444
+  strong
+    font-weight: bold
