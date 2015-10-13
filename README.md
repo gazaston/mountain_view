@@ -1,3 +1,33 @@
+# Fork notes
+
+### Dependencies
+
+- Bourbon
+- Neat
+- Bitters
+- normalize-rails
+
+Need to ideally use the startmeup gem to set up structure
+
+
+### Setup
+
+- New app
+- Add mountain_view to gemfile
+- bundle
+- cd app/assets/stylesheets then run startmeup install
+- Add mount MountainView::Engine => "/styleguide" to routes.rb
+- **TODO:** automate proper application.sass and _mixin.sass file generation
+- palette partials (haml & sass) need overwriting in main app
+
+### Todo
+
+- responsiveize the styleguide
+- investigate [global stylesheets](https://github.com/gazaston/mountain_view#global-stylesheets) (think Bourbon for each component etc)
+- should we declare dependencies in the engine? Should the dependency be startmeup?- 
+
+=============================
+
 ![Mountain View](https://cloud.githubusercontent.com/assets/623766/7324123/e4f4a9fe-ea89-11e4-97cd-006314593252.png)
 
 
