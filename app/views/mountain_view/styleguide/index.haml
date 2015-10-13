@@ -1,0 +1,28 @@
+.mv-main__header
+  %h1 UI Components
+- if mv_components.any?
+  .mv-main__description
+    Select one of the components from the side to view its examples and documentation.
+- else
+  .mv-hint
+    %h2
+      %span> Hint:
+      You haven't created any components yet
+    %ul
+      %li
+        You can generate your first component by running:
+        %br/
+        %pre rails generate mountain_view:component component-name
+      %li
+        Or manually create the following files:
+        %br/
+        %pre
+          :preserve
+            
+            app/
+              components/
+                header/
+                  _header.html.erb
+                  header.css
+                  header.js
+                  header.yml
