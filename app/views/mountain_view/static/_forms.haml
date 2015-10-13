@@ -1,0 +1,57 @@
+%section#forms
+  
+  %h2 Fieldsets and Form Elements
+  %hr
+  
+  %fieldset
+    %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.
+    %form
+      %h2 Form Element
+      %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui.
+      %p
+        %label{for: "text_field"} Text Field:
+        %input#text_field{type: "text"}/
+      %p
+        %label{for: "text_area"} Text Area:
+        %textarea#text_area
+      %p
+        %label{for: "select_element"} Select Element:
+        %select{name: "select_element"}
+          %optgroup{label: "Option Group 1"}
+            %option{value: "1"} Option 1
+            %option{value: "2"} Option 2
+            %option{value: "3"} Option 3
+          %optgroup{label: "Option Group 2"}
+            %option{value: "1"} Option 1
+            %option{value: "2"} Option 2
+            %option{value: "3"} Option 3
+      %p
+        %label{for: "radio_buttons"} Radio Buttons:
+        %label
+          %input.radio{name: "radio_button", type: "radio", value: "radio_1"}/
+          Radio 1
+        %label
+          %input.radio{name: "radio_button", type: "radio", value: "radio_2"}/
+          Radio 2
+        %label
+          %input.radio{name: "radio_button", type: "radio", value: "radio_3"}/
+          Radio 3
+      %p
+        %label{for: "checkboxes"} Checkboxes:
+        %label
+          %input.checkbox{name: "checkboxes", type: "checkbox", value: "check_1"}/
+          Radio 1
+        %label
+          %input.checkbox{name: "checkboxes", type: "checkbox", value: "check_2"}/
+          Radio 2
+        %label
+          %input.checkbox{name: "checkboxes", type: "checkbox", value: "check_3"}/
+          Radio 3
+      %p
+        %label{for: "password"} Password:
+        %input.password{name: "password", type: "password"}/
+      %p
+        %label{for: "file"} File Input:
+        %input.file{name: "file", type: "file"}/
+      %p
+        %input.button{type: "submit", value: "Submit"}/
