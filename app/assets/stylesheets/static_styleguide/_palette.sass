@@ -1,0 +1,66 @@
+// Palette
+
+// Standard palette, colours
+$purple: #2e358b
+$mauve: #6f72af
+$fuschia: #912b88
+$pink: #d53880
+$baby-pink: #f499be
+$red: #b10e1e
+$mellow-red: #df3034
+$orange: #f47738
+$brown: #b58840
+$yellow: #ffbf47
+$green: #006435
+$grass-green: #85994B
+$turquoise: #28a197
+$light-blue: #2b8cc4
+
+// Standard palette, greys
+$black: #0b0c0c
+$grey-1: #333333
+$grey-2: #555555
+$grey-3: #777777
+$grey-4: #999999
+$grey-5: #e0e0e0
+$grey-6: #f8f8f8
+$white: white
+
+// Brand colours
+$brand-green: #73B42A
+$brand-green-dark: #006435
+$mlmc-blue: #308DC3
+$mlmc-blue-dark: #0B4C84
+
+$palette: $brand-green $brand-green-dark $purple $mauve $fuschia $pink $baby-pink $red $mellow-red $orange $brown $yellow $green $grass-green $turquoise $light-blue
+
+@mixin swatch
+  @for $i from 1 through length($palette)
+    .swatch-#{$i}
+      background-color: nth($palette, $i)
+
+#palette
+  .palette_chips
+    +clearfix
+
+.color_chip
+  margin-bottom: 1em
+  .color_chip__swatch
+    +swatch
+    .swatch
+      height: 5em
+  .color_chip__info
+    padding: 1em
+    background-color: $grey-6
+    h5
+      margin-top: 0
+    code
+      display: block
+      margin: 0.5em 0
+  +media($small-screen)
+    +span-columns(6)
+    +omega(2n)
+  +media($medium-large-screen)
+    +span-columns(3)
+    +omega-reset(2n)
+    +omega(4n)
