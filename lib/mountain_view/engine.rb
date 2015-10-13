@@ -2,6 +2,12 @@ require "rails"
 require "mountain_view"
 require "mountain_view/component"
 
+require "normalize-rails"
+require "haml-rails"
+require "bourbon"
+require "neat"
+require "startmeup"
+
 module MountainView
   class Engine < ::Rails::Engine
     isolate_namespace MountainView
