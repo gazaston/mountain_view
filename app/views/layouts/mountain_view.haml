@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %title Styleguide
+    = stylesheet_link_tag 'mountain_view/styleguide', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'mountain_view/styleguide', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .mv-header
+      .mv-header__logo 
+        =ENV["application_name"]
+        Styleguide
+      .mv-header__nav
+        = link_to "UI Components", styleguide_index_path, class: "button"
+        = link_to "Styleguide", static_index_path, class: "button"
+        = link_to "Back to site", main_app.root_path, class: "button"
+    .mv-flex-wrapper
+      .mv-sidebar
+        %h3 COMPONENTS
+        %ul
+          - mv_components.each do |component|
+            %li
+              = link_to component.title, styleguide_path(id: component.name)
+      .mv-main
+        = yield
+
+  =render "shared/debug"
