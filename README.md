@@ -13,11 +13,11 @@ Need to ideally use the startmeup gem to set up structure
 ### Setup
 
 - New app
-- Add mountain_view to gemfile
+- Add `mountain_view` to gemfile
 - bundle
-- cd app/assets/stylesheets then run startmeup install
-- Add mount MountainView::Engine => "/styleguide" to routes.rb
-- **TODO:** automate proper application.sass and _mixin.sass file generation
+- `cd app/assets/stylesheets` then run `startmeup install`
+- Add `mount MountainView::Engine => "/styleguide"` to routes.rb
+- **TODO:** automate proper `application.sass` and `_mixin.sass` file generation
 - palette partials (haml & sass) need overwriting in main app
 
 ### Todo
