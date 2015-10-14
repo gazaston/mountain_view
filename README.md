@@ -23,7 +23,7 @@
 
 - responsiveize the styleguide
 - investigate [global stylesheets](https://github.com/gazaston/mountain_view#global-stylesheets) (think Bourbon for each component etc)
-- should we declare dependencies in the engine? Should the dependency be startmeup?- 
+- Start a repo of components
 
 =============================
 
