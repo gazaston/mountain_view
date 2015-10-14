@@ -2,13 +2,12 @@
 
 ### Dependencies
 
-- Bourbon
-- Neat
-- Bitters
 - normalize-rails
-
-Need to ideally use the startmeup gem to set up structure
-
+- haml-rails
+- bourbon
+- neat
+- bitters
+- startmeup
 
 ### Setup
 
