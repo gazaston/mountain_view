@@ -21,7 +21,6 @@
 
 ### Todo
 
-- responsiveize the styleguide
 - investigate [global stylesheets](https://github.com/gazaston/mountain_view#global-stylesheets) (think Bourbon for each component etc)
 - Start a repo of components
 
