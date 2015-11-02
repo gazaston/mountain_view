@@ -4,43 +4,53 @@
 @import neat
 @import base/variables
 @import ../static_styleguide/static_styleguide
+@import prism
 @import base/base
+@import base/debug
 
 // HEADER
 
 .mv-header
   background: $grey-5
-  padding: 20px
+  padding: 1em
   +clearfix
 
 .mv-header__logo
   font-weight: bold
   color: $grey-1
   font-size: 1.3em
-  float: left
+  +media($medium-screen)
+    float: left
 
 .mv-header__nav
-  float: right
+  clear: both
+  margin-top: 1em
   a
-    // @extend .button
     font-size: 0.8em
+  +media($medium-screen)
+    float: right
+    clear: none
+    margin-top: 0
 
-// FlEX WRAPPER
+.mv-mobile__nav
+  display: block
+  padding: 1em
+  +media($medium-screen)
+    display: none
+
+// FLEX WRAPPER
 
 .mv-flex-wrapper
-  display: flex
+  // display: flex
 
 // SIDEBAR
 
 .mv-sidebar
   background: #F7F7F7
-  width: 18%
   box-sizing: border-box
   display: block
-  float: left
-  padding: 30px 20px
-  flex: 1
-  min-height: 100vh
+  padding: 1em
+  clear: both
   h3
     font-weight: bold
     font-size: 16px
@@ -49,19 +59,25 @@
   ul li
     margin-bottom: 20px
     a
-      color: #555
+      color: $action-color
       font-size: 14px
       text-decoration: none
       &:hover
-        color: #000
+        color: shade($action-color,20)
+  +media($medium-screen)
+    float: left
+    width: 20%
+    clear: none
 
 // MAIN
 
 .mv-main
   box-sizing: border-box
-  width: 82%
-  float: left
-  padding: 30px 60px
+  padding: 1em
+  +media($medium-screen)
+    float: right
+    width: 80%
+    min-height: 100vh
 
 .mv-main__header
   margin-bottom: 40px
