@@ -15,13 +15,16 @@
         = link_to "Styleguide", static_index_path, class: "button"
         = link_to "Back to site", main_app.root_path, class: "button"
     .mv-flex-wrapper
-      .mv-sidebar
+      .mv-mobile__nav
+        %a{class: "small button", href: "#nav"}
+          See all elements
+      .mv-main
+        = yield
+      #nav.mv-sidebar
         %h3 COMPONENTS
         %ul
           - mv_components.each do |component|
             %li
               = link_to component.title, styleguide_path(id: component.name)
-      .mv-main
-        = yield
 
   =render "shared/debug"

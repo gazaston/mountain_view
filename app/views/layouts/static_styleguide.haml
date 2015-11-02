@@ -15,7 +15,12 @@
         = link_to "Styleguide", static_index_path, class: "button"
         = link_to "Back to site", main_app.root_path, class: "button"
     .mv-flex-wrapper
-      .mv-sidebar
+      .mv-mobile__nav
+        %a{class: "small button", href: "#nav"}
+          See all elements
+      .mv-main.container
+        = yield
+      #nav.mv-sidebar
         %h3 ELEMENTS
         %ul
           %li= link_to "Palette", :anchor => "palette"
@@ -24,7 +29,5 @@
           %li= link_to "Lists", :anchor => "lists"
           %li= link_to "Forms", :anchor => "forms"
           %li= link_to "Tables", :anchor => "tables"
-      .mv-main.container
-        = yield
 
   =render "shared/debug"
